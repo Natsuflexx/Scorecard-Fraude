@@ -273,6 +273,9 @@ def calcular_score(datos: dict) -> dict:
         "detalle": resultado_detalle
     }
 
+@app.get("/")
+def raiz():
+    return {"mensaje": "API Scorecard Fraude funcionando. Usa POST /predecir/ para calcular el score."}
 
 
 @app.post("/predecir/")
