@@ -1,6 +1,7 @@
 from enum import Enum
 from fastapi import FastAPI
 from pydantic import BaseModel, create_model,Field
+from fastapi.middleware.cors import CORSMiddleware
 
 
 class MonthEnum(Enum):
@@ -272,6 +273,14 @@ def calcular_score(datos: dict) -> dict:
         "score_total": score_total,
         "detalle": resultado_detalle
     }
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Permitir desde cualquier origen
+    allow_credentials=True,
+    allow_methods=["*"],  # Permitir todos los métodos
+    allow_headers=["*"],  # Permitir todos los headers
+)
 
 @app.get("/")
 def raiz():
