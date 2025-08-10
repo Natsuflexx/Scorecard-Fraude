@@ -376,7 +376,7 @@ app = FastAPI(title="API Scorecard Fraude")
 # Función para calcular el score a partir de la scorecard
 def calcular_score(datos: dict) -> dict:
     resultado_detalle = []
-    score_total = 0
+    score_total = 600
 
     for var, valor in datos.items():
         valor_normalizado = valor
