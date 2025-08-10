@@ -112,7 +112,7 @@ class DaysPolicy_ClaimEnum(Enum):
 
 class PastNumberOfClaimsEnum(Enum):
     more_than_4 = "more than 4"
-    one = "uno"
+    one = 1
     two_to_four = "2 to 4"
     none = "none"
 
@@ -203,7 +203,7 @@ puntos_dict = {
     "Deductible": {300: -54,400: -72,500: -89.9,700: -125.9},
     "DaysPolicyAccident": {"more than 30": 0.1,"otros": -6.1},
     "DaysPolicyClaim": {"more than 30": 0,"otros": 0.2},
-    "PastNumberOfClaims": {"more than 4": 38.2,"uno": 5,"2 to 4": -1.1,"none": -15.3},
+    "PastNumberOfClaims": {"more than 4": 38.2,1: 5,"2 to 4": -1.1,"none": -15.3},
     "AgeOfVehicle": {"more than 7": 10,"7 years": 8.8,"6 years": -8.8,"otros": -16.6,"5 years": -21.9},
     "AgeOfPolicyHolder": {"51 to 65": 24.2,"41 to 50": 16.3,"36 to 40": -2.2,"31 to 35": -7.5,"otros": -8.2},
     "PoliceReportFiled": {"otros": 47,"no": -0.8},
