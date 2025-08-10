@@ -1,7 +1,7 @@
 from enum import Enum
 from fastapi import FastAPI
 from pydantic import BaseModel, create_model,Field
-import pandas as pd
+
 
 class MonthEnum(Enum):
     nov = "nov"
